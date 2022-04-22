@@ -16,3 +16,8 @@ Portfolio: Mobile Version
 -   GitHub: [@githubhandle](https://github.com/Addisu87)
 -   Twitter: [@twitterhandle](https://twitter.com/AddisuTedla)
 -   LinkedIn: [LinkedIn](https://www.linkedin.com/in/addisu-tedla-8b4a10143/)
+
+# How to get started using your project locally
+
+-   Click the Go-live option in your VS code and follow the link which is similar to this.
+-   http://127.0.0.1:5500/
