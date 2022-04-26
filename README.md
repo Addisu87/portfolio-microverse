@@ -7,29 +7,25 @@
 
 ## Built With
 
--   Major languages - HTML and CSS are used to make this projects.
--   Frameworks - There is no any frameworks used in this work.
+-   Major languages - HTML and CSS.
+-   Frameworks -
 -   Technologies used
 
-👤 **Author1**
+👤 **Addisu Haile**
 
 -   GitHub: [@githubhandle](https://github.com/Addisu87)
 -   Twitter: [@twitterhandle](https://twitter.com/AddisuTedla)
 -   LinkedIn: [LinkedIn](https://www.linkedin.com/in/addisu-tedla-8b4a10143/)
 
-# How to get started using your project locally
-
--   Click the Go-live option in your VS code and follow the link which is similar to this.
--   http://127.0.0.1:5500/
 
 ## Getting Started
 
--   Copy this link from my git account
-    -- git@github.com:Addisu87/portfolio-sections.git
--   Paste this link in your terminal using a command
-    -- "git clone git@github.com:Addisu87/portfolio-sections.git"
--   Click "Go Live" in your terminal to run live server
--   Finally, you can see the link "http://127.0.0.1:5500/" in your browser.
+- Copy the link from my github account.
+- Create a local directory that you want to clone the repository.
+- Open the command prompt in the created directory.
+- On the terminal run this command git clone git@github.com:Addisu87/portfolio-sections.git
+- Go to the repository folder using the command prompt cd portfolio-sections.
+- Install the dev dependencies for linters run npm install.
 
 ### Install
 
