@@ -120,14 +120,22 @@ button:hover {
 }
 
 /* Navbar */
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 2px solid red;
+}
+
+.navbar-icon {
+	border: none;
+}
+
+.navbar ul {
+	display: none;
+}
 
 /* Hero section */
-.header {
-	align-items: center;
-	justify-content: space-between;
-	padding: 0 24px 0 20px;
-	background-color: #fff;
-}
 
 .logo {
 	color: #6070ff;
@@ -151,14 +159,6 @@ button:hover {
 	align-items: flex-start;
 }
 
-.icon-btn {
-	border: none;
-}
-
-.nav-list {
-	display: none;
-}
-
 /* Work section */
 
 .works {
@@ -176,17 +176,16 @@ button:hover {
 	background-repeat: no-repeat;
 	background-color: white;
 	padding: 16px;
+	width: 100%;
 }
 
 .card_img {
 	border-radius: 8px;
-	margin-bottom: 12px;
-	width: 100%;
+	border: 2px solid red;
+	/* width: 100%; */
 }
 
 .card_content {
-	display: flex;
-	flex-direction: column;
 	align-items: flex-start;
 }
 
@@ -227,9 +226,6 @@ button:hover {
 	display: flex;
 	flex-direction: column;
 	padding: 12px 24px;
-	background-color: #fff;
-	fill: solid;
-	border-top-right-radius: 15%;
 }
 
 .social-links {
@@ -398,10 +394,17 @@ input:focus:invalid {
 	/* navbar */
 	.navbar {
 		height: 70px;
+		border: 2px solid red;
+		align-items: center;
+		justify-content: space-between;
 	}
 
 	.navbar ul {
 		display: flex;
+	}
+
+	.navbar-icon {
+		display: none;
 	}
 
 	.navbar li {
@@ -440,9 +443,7 @@ input:focus:invalid {
 		height: 100%;
 	}
 
-	.nav-icon {
-		display: none;
-	}
+	/* Hero-section */
 
 	.profile {
 		width: 60%;
@@ -478,19 +479,16 @@ input:focus:invalid {
 		justify-content: space-around;
 		align-items: center;
 		width: 100%;
-		border: 2px solid red;
 		margin-bottom: 142px;
 	}
 
 	.card_img {
 		width: 544px;
-		border: 2px solid blue;
 	}
 
 	.card_content {
 		width: 496px;
 		padding: 48px;
-		border: 2px solid green;
 	}
 
 	/* About Me Section */
@@ -498,16 +496,21 @@ input:focus:invalid {
 	.about {
 		display: flex;
 		flex-direction: row;
+		background-color: #fff;
+		border-top-right-radius: 15%;
 	}
 
 	.about-details {
-		border: 2px solid blue;
 		padding: 142px 20px 122px 142px;
+	}
+
+	.about-details h2 {
+		font-size: 40px;
+		font-weight: 700 bold;
 	}
 
 	.about-dropdown {
 		flex: 0 0 50%;
-		border: 2px solid red;
 		padding: 142px 87px 122px 20px;
 	}
 
@@ -521,39 +524,3 @@ input:focus:invalid {
 		flex-direction: row-reverse;
 	}
 }
-
-/* @media only screen and (min-width: 768px) and (max-width: 1024px) {
-	.nav-icon {
-		display: none;
-	}
-	.nav-list {
-		display: flex;
-	}
-	h1 {
-		font-weight: 700 bold;
-		font-size: 48px;
-		line-height: 60px;
-	}
-
-	#contact {
-		display: center;
-	}
-} */
-
-/* @media only screen and (max-width: 480px) {
-	.nav-icon {
-		display: flex;
-	}
-	.nav-list {
-		display: none;
-	}
-}
-
-@media only screen and (max-width: 320px) {
-	.nav-icon {
-		display: flex;
-	}
-	.nav-list {
-		display: none;
-	}
-} */
