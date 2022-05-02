@@ -31,6 +31,7 @@
 
 - Install npm
 
-## Link to see my work online
+## Live Demo
 
-- https://addisu87.github.io/
+- you can follow the link to see my portfolio work.
+- https://addisu87.github.io/portfolio-microverse/
