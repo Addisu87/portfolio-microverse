@@ -31,6 +31,6 @@
 
 - Install npm
 
-## Link to see my work online
-
+## Live Demo
+- you can follow the link to see my portfolio work.
 - https://addisu87.github.io/
