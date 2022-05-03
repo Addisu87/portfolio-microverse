@@ -24,7 +24,7 @@
     <div class="navbar">
       <div class="container flex">
         <header class="header">
-          <a href="#"><h2 class="logo">My Logo</h2></a>
+          <a href="#logo"><h2 class="logo" id="logo">My Logo</h2></a>
         </header>
         <nav>
           <button class="navbar-icon" type="button">
@@ -33,13 +33,13 @@
 
           <ul class="nav-list">
             <li>
-              <a href="portfolio.html"><span>Portfolio</span> </a>
+              <a href="#portfolio"><span>Portfolio</span></a>
             </li>
             <li>
-              <a href="about.html"> <span>About</span> </a>
+              <a href="#about-me"> <span>About</span></a>
             </li>
             <li>
-              <a href="contact.html"><span>Contact</span> </a>
+              <a href="#contact"><span>Contact</span></a>
             </li>
           </ul>
         </nav>
@@ -50,7 +50,7 @@
 
     <main class="main">
       <!-- Hero Section -->
-      <section class="hero">
+      <section class="hero" id="portfolio">
         <div class="profile">
           <h1 class="heading-title">
             I'm Addisu <br />
@@ -64,8 +64,14 @@
             contact me.
           </p>
 
+          <audio controls>
+            <source src="images/audio.mp3" type="audio/mp3" />
+          </audio>
+
           <div class="social-links">
-            <h3 class="heading">LET'S CONNECT</h3>
+            <a href="#contact">
+              <h4 class="heading-connect">LET'S CONNECT</h4></a
+            >
 
             <ul class="horizontal-list">
               <li>
@@ -140,10 +146,10 @@
               VR.
             </p>
             <ul class="horizontal-list">
-              <li><span class="label">HTML</span></li>
-              <li><span class="label">CSS</span></li>
+              <li><span class="lang">HTML</span></li>
+              <li><span class="lang">CSS</span></li>
               <li>
-                <span class="label">JavaScript</span>
+                <span class="lang">JavaScript</span>
               </li>
             </ul>
             <div class="card_btn">
@@ -173,14 +179,14 @@
             </ul>
             <p class="text">
               Experimental content creation feature that allows users to add to
-              an existing story over the course of a day without spamming
-              without their friends.
+              an existing story over the course of a day wiangt spamming without
+              their friends.
             </p>
             <ul class="horizontal-list">
-              <li><span class="label">HTML</span></li>
-              <li><span class="label">CSS</span></li>
+              <li><span class="lang">HTML</span></li>
+              <li><span class="lang">CSS</span></li>
               <li>
-                <span class="label">JavaScript</span>
+                <span class="lang">JavaScript</span>
               </li>
             </ul>
             <div class="card_btn">
@@ -213,10 +219,10 @@
               sign-ups required.
             </p>
             <ul class="horizontal-list">
-              <li><span class="label">HTML</span></li>
-              <li><span class="label">CSS</span></li>
+              <li><span class="lang">HTML</span></li>
+              <li><span class="lang">CSS</span></li>
               <li>
-                <span class="label">JavaScript</span>
+                <span class="lang">JavaScript</span>
               </li>
             </ul>
             <div class="card_btn">
@@ -251,10 +257,10 @@
               unlocking your most expensive computer: your car.
             </p>
             <ul class="horizontal-list">
-              <li><span class="label">HTML</span></li>
-              <li><span class="label">CSS</span></li>
+              <li><span class="lang">HTML</span></li>
+              <li><span class="lang">CSS</span></li>
               <li>
-                <span class="label">JavaScript</span>
+                <span class="lang">JavaScript</span>
               </li>
             </ul>
             <div class="card_btn">
@@ -266,114 +272,112 @@
 
       <!-- About-Me section -->
 
-      <section class="about">
-        <div class="about-details">
-          <h2 class="title">
-            About <br />
-            Myself
-          </h2>
-          <p class="text">
-            Hello I'm a software developer! I can help you build a product,
-            feature or website Look through some of my work and experience! If
-            you like what you see and have a project you need coded, don't
-            hesitate to contact me.
-          </p>
+      <section id="about-me">
+        <div class="about">
+          <div class="about-details">
+            <h2 class="title">
+              About <br />
+              Myself
+            </h2>
+            <p class="text">
+              Hello I'm a software developer! I can help you build a product,
+              feature or website Look through some of my work and experience! If
+              you like what you see and have a project you need coded, don't
+              hesitate to contact me.
+            </p>
 
-          <div class="social-links">
-            <h3 class="heading">LET'S CONNECT</h3>
-            <ul class="horizontal-list">
-              <li>
-                <a
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  href="https://twitter.com/AddisuTedla"
-                  ><i class="fa-brands fa-twitter icon"></i
-                ></a>
+            <div class="social-links">
+              <a href="#contact">
+                <h4 class="heading-connect">LET'S CONNECT</h4></a
+              >
+              <ul class="horizontal-list">
+                <li>
+                  <a
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    href="https://twitter.com/AddisuTedla"
+                    ><i class="fa-brands fa-twitter icon"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    href="https://www.linkedin.com/in/addisu-tedla-8b4a10143/"
+                    ><i class="fa-brands fa-linkedin icon"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    href="https://github.com/Addisu87"
+                    ><i class="fa-brands fa-github icon"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    href="https://medium.com/@addisuhaile87"
+                    ><i class="fa-brands fa-medium icon"></i
+                  ></a>
+                </li>
+                <li>
+                  <a rel="noopener noreferrer" target="_blank" href="#"
+                    ><i class="fa-brands fa-angellist icon"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+
+            <button class="btn" type="submit">Get my resume</button>
+          </div>
+
+          <div class="about-dropdown">
+            <ul>
+              <li class="dropdown-skill">
+                <details open>
+                  <summary>
+                    Languages
+                    <i class="fa-solid fa-angle-down"></i>
+                  </summary>
+                  <ul class="vertical-list-dropdown">
+                    <li class="mini-card">
+                      <img src="images/html.svg" alt="html-log" />
+                      <h3 class="mini-card-title">HTML</h3>
+                    </li>
+                    <li class="mini-card">
+                      <img src="images/css.svg" alt="css-logo" />
+                      <h3 class="mini-card-title">CSS</h3>
+                    </li>
+                    <li class="mini-card">
+                      <img src="images/js.svg" alt="javaScript-logo" />
+                      <h3 class="mini-card-title">JavaScript</h3>
+                    </li>
+                  </ul>
+                </details>
               </li>
-              <li>
-                <a
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  href="https://www.linkedin.com/in/addisu-tedla-8b4a10143/"
-                  ><i class="fa-brands fa-linkedin icon"></i
-                ></a>
+
+              <li class="dropdown-skill">
+                <details>
+                  <summary>Frameworks</summary>
+                </details>
+                <i class="fa-solid fa-angle-right"></i>
               </li>
-              <li>
-                <a
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  href="https://github.com/Addisu87"
-                  ><i class="fa-brands fa-github icon"></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  href="https://medium.com/@addisuhaile87"
-                  ><i class="fa-brands fa-medium icon"></i
-                ></a>
-              </li>
-              <li>
-                <a rel="noopener noreferrer" target="_blank" href="#"
-                  ><i class="fa-brands fa-angellist icon"></i
-                ></a>
+              <li class="dropdown-skill">
+                <details>
+                  <summary>Skills</summary>
+                </details>
+                <i class="fa-solid fa-angle-right"></i>
               </li>
             </ul>
           </div>
-
-          <button class="btn" type="submit">Get my resume</button>
-        </div>
-
-        <div class="about-dropdown">
-          <ul>
-            <li class="dropdown-skill">
-              <div class="dropdown-headers">
-                <h3 class="dropdown-title">Languages</h3>
-                <button type="button" class="icon_btn_dropdown">
-                  <i class="fa-solid fa-angle-down"></i>
-                </button>
-              </div>
-
-              <div class="dropdown-skill-item">
-                <ul class="vertical-list-dropdown">
-                  <li class="mini-card">
-                    <img src="images/html.svg" alt="html-log" />
-                    <h3 class="mini-card-title">HTML</h3>
-                  </li>
-                  <li class="mini-card">
-                    <img src="images/css.svg" alt="css-logo" />
-                    <h3 class="mini-card-title">CSS</h3>
-                  </li>
-                  <li class="mini-card">
-                    <img src="images/js.svg" alt="javaScript-logo" />
-                    <h3 class="mini-card-title">JavaScript</h3>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="dropdown-skill">
-              <div class="dropdown-headers">
-                <h3 class="dropdown-title">Frameworks</h3>
-                <button type="button" class="icon_btn_dropdown">
-                  <i class="fa-solid fa-angle-right"></i>
-                </button>
-              </div>
-            </li>
-            <li class="dropdown-skill">
-              <div class="dropdown-headers">
-                <h3 class="dropdown-title">Skills</h3>
-                <button type="button" class="icon_btn_dropdown">
-                  <i class="fa-solid fa-angle-right"></i>
-                </button>
-              </div>
-            </li>
-          </ul>
         </div>
       </section>
 
       <!-- Contact section -->
-      <section class="address">
+      <section class="address" id="contact">
         <div class="contact">
           <h2 class="title">Contact me</h2>
           <p class="text-contact">

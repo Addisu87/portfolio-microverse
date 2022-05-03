@@ -2,7 +2,9 @@
   --primary-color: #fff;
   --secondary-color: #6070ff;
   --third-color: #172b4d;
+  --header-color: #091e42;
   --paragraph-color: #344563;
+  --icon-color: #505f79;
 }
 
 * {
@@ -22,7 +24,7 @@ a {
 }
 
 i {
-  color: #505f79;
+  color: var(--icon-color);
   fill: currentColor;
 }
 
@@ -33,8 +35,8 @@ ul {
 h1 {
   font-weight: 700 bold;
   font-size: 40px;
-  line-height: 50px;
-  color: var(--third-color);
+  line-height: 52px;
+  color: var(--header-color);
   display: block;
 }
 
@@ -42,24 +44,28 @@ h2 {
   font-size: 32px;
   line-height: 44px;
   font-weight: 700;
-  color: var(--third-color);
+  color: var(--header-color);
   fill: solid;
 }
 
 h3 {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 13px;
+  line-height: 16px;
   font-weight: 500;
   font-style: medium;
-  text-transform: uppercase;
+  color: var(--paragraph-color);
+}
+
+h4 {
+  color: var(--secondary-color);
 }
 
 p {
   display: flex;
   font-size: 15px;
+  line-height: 24px;
   font-weight: 400;
   font-style: normal;
-  line-height: 24px;
   color: var(--paragraph-color);
   margin: 10px 0;
 }
@@ -91,7 +97,7 @@ button:hover {
 }
 
 /* Label */
-.label {
+.lang {
   font-size: 12px;
   font-weight: 500;
   line-height: 16px;
@@ -113,8 +119,8 @@ button:hover {
 }
 
 .horizontal-list i {
-  width: 18px;
-  height: 20px;
+  width: 20px;
+  height: 24px;
 }
 
 /* Vertical List */
@@ -228,6 +234,14 @@ header h2 {
   width: 100%;
 }
 
+.mini-card img {
+  width: 48px;
+}
+
+.card img:hover {
+  transform: scale(1.3);
+}
+
 .card_content {
   align-items: flex-start;
 }
@@ -269,6 +283,7 @@ header h2 {
   display: flex;
   flex-direction: column;
   padding: 12px 24px;
+  border-top-right-radius: 10%;
 }
 
 .social-links {
@@ -280,12 +295,6 @@ header h2 {
   margin-bottom: 12px;
 }
 
-.icon_btn_dropdown {
-  border: none;
-  border-radius: none;
-  transition: opacity 0.2s;
-}
-
 .meta-info {
   display: inline-block;
   font-size: 13px;
@@ -295,31 +304,24 @@ header h2 {
 }
 
 .dropdown-skill {
-  display: block;
-}
-
-.dropdown-title {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 40px;
-  margin-right: 14px;
-}
-
-.dropdown-skill i {
-  width: 30px;
-  height: 30px;
-  margin-right: 14px;
-  background-color: #f7f7f9;
-  fill: solid;
-}
-
-.dropdown-headers {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 70px;
-  padding: 0 12px;
+  padding: 0 10px;
   border-bottom: 1px solid #eee;
+}
+
+summary {
+  font-family: inherit;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  margin: 16px 0;
+  color: var(--paragraph-color);
 }
 
 .mini-card {
@@ -327,7 +329,7 @@ header h2 {
   background-color: #f7f7f9;
   border-radius: 8px;
   align-items: center;
-  margin: 10px 10px;
+  margin-bottom: 10px;
 }
 
 .mini-card *:first-child {
@@ -339,10 +341,6 @@ header h2 {
   font-weight: 500;
   line-height: 20px;
   color: #253858;
-}
-
-.mini-card img {
-  width: 48px;
 }
 
 /* contact section */
@@ -410,11 +408,12 @@ label {
 input {
   height: 48px;
   box-shadow: none;
+  padding-left: 10px;
 }
 
 textarea {
   height: 117px;
-  padding: 2px 4px 4px 4px;
+  padding: 6px 8px;
 }
 
 .btn_submit {
@@ -476,6 +475,11 @@ input:focus:invalid {
     transform: translateX(90px) rotate(45deg);
   }
 
+  h3 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
   /* Hero-section */
 
   .profile {
@@ -511,11 +515,13 @@ input:focus:invalid {
 
   .card img {
     width: 544px;
+    height: 448px;
+    padding: 24px;
   }
 
   .card_content {
     width: 496px;
-    padding: 48px;
+    padding: 24px;
   }
 
   /* About Me Section */
@@ -559,8 +565,11 @@ input:focus:invalid {
   .contact button {
     align-self: center;
     margin: auto;
-    transition: 1s ease-in-out;
-    color: #2a9df4;
+  }
+
+  .contact a:hover {
+    text-decoration: 2px #2a9df4 solid;
+    background-color: var(--primary-color);
   }
 
   .shape {
