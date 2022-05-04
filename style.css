@@ -56,10 +56,6 @@ h3 {
   color: var(--paragraph-color);
 }
 
-h4 {
-  color: var(--secondary-color);
-}
-
 p {
   display: flex;
   font-size: 15px;
@@ -208,6 +204,10 @@ header h2 {
   align-items: flex-start;
 }
 
+.connect {
+  color: var(--secondary-color);
+}
+
 /* Work section */
 
 .works {
@@ -236,6 +236,7 @@ header h2 {
 
 .mini-card img {
   width: 48px;
+  height: 48px;
 }
 
 .card img:hover {
@@ -282,7 +283,9 @@ header h2 {
 .about {
   display: flex;
   flex-direction: column;
-  padding: 12px 24px;
+  padding: 12px 20px;
+  overflow: hidden;
+  background-color: var(--primary-color);
   border-top-right-radius: 10%;
 }
 
@@ -437,7 +440,7 @@ input:focus:invalid {
 
 /* Media Queries section */
 
-@media screen and (min-width: 768px) and (max-width: 1440px) {
+@media screen and (min-width: 768px) {
   /* navbar */
   .navbar ul {
     display: flex;
@@ -507,21 +510,21 @@ input:focus:invalid {
   .card {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     margin-bottom: 142px;
   }
 
-  .card img {
-    width: 544px;
-    height: 448px;
-    padding: 24px;
+  .card_img {
+    width: 70%;
+    height: 80%;
+    padding: 23px;
   }
 
   .card_content {
-    width: 496px;
-    padding: 24px;
+    width: 60%;
+    padding: 23px;
   }
 
   /* About Me Section */
