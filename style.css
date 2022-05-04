@@ -58,7 +58,7 @@ h3 {
 
 p {
   display: flex;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   font-style: normal;
@@ -490,12 +490,6 @@ input:focus:invalid {
     margin: 200px auto;
   }
 
-  p {
-    font-size: 20px;
-    line-height: 28px;
-    display: center;
-  }
-
   /* work section */
 
   .works {
@@ -573,6 +567,11 @@ input:focus:invalid {
   .contact a:hover {
     text-decoration: 2px #2a9df4 solid;
     background-color: var(--primary-color);
+  }
+
+  .contact > p {
+    font-size: 20px;
+    text-align: center;
   }
 
   .shape {
