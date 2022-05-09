@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,10 +26,14 @@
         <header class="header">
           <a href="#logo"><h2 class="logo" id="logo">My Logo</h2></a>
         </header>
-        <nav>
-          <button class="navbar-icon" type="button">
-            <i class="fa-solid fa-bars"></i>
-          </button>
+        <nav class="active" id="myLinks">
+          <a
+            href="javascript:void(0);"
+            class="navbar-icon"
+            onclick="myFunction()"
+          >
+            <i onclick="myFunction(this)" class="fa-solid fa-bars"></i>
+          </a>
 
           <ul class="nav-list">
             <li>
@@ -358,14 +362,14 @@
               <li class="dropdown-skill">
                 <details>
                   <summary>Frameworks</summary>
+                  <i class="fa-solid fa-angle-right"></i>
                 </details>
-                <i class="fa-solid fa-angle-right"></i>
               </li>
               <li class="dropdown-skill">
                 <details>
                   <summary>Skills</summary>
+                  <i class="fa-solid fa-angle-right"></i>
                 </details>
-                <i class="fa-solid fa-angle-right"></i>
               </li>
             </ul>
           </div>
@@ -431,5 +435,6 @@
         </div>
       </section>
     </main>
+    <script src="js/main.js"></script>
   </body>
 </html>
