@@ -193,14 +193,6 @@ button:hover {
   color: #fff;
 }
 
-.mobile-nav span {
-  font-family: inherit;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 20px;
-}
-
 .mobile-nav a:hover {
   border-bottom: 2px #2a9df4 solid;
 }
