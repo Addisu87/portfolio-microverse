@@ -12,6 +12,10 @@
 - Frameworks -
 - Technologies used
 
+## Live Demo
+
+[Live Demo Link](https://addisu87.github.io/portfolio-microverse/)
+
 👤 **Addisu Haile**
 
 - GitHub: Addisu87
@@ -31,7 +35,22 @@
 
 - Install npm
 
-## Live Demo
+## 🤝 Contributing
 
-- you can follow the link to see my portfolio work.
-- https://addisu87.github.io/portfolio-microverse/
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/Addisu87/portfolio-microverse/issues/new).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.

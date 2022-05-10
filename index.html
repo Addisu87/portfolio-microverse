@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,30 +21,34 @@
 
   <body>
     <!-- Navbar -->
-    <div class="navbar">
-      <div class="container flex">
-        <header class="header">
-          <a href="#logo"><h2 class="logo" id="logo">My Logo</h2></a>
-        </header>
-        <nav>
-          <button class="navbar-icon" type="button">
-            <i class="fa-solid fa-bars"></i>
-          </button>
+    <header class="header">
+      <div class="navbar">
+        <div class="container flex">
+          <a href="#logo" class="logo">My Logo</a>
 
-          <ul class="nav-list">
-            <li>
-              <a href="#portfolio"><span>Portfolio</span></a>
-            </li>
-            <li>
-              <a href="#about-me"> <span>About</span></a>
-            </li>
-            <li>
-              <a href="#contact"><span>Contact</span></a>
-            </li>
-          </ul>
-        </nav>
+          <nav id="mobile-menu-hide" class="mobile-menu-hide">
+            <button type="button" id="btn-close-nav">
+              <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+            <ul>
+              <li>
+                <a href="#portfolio" class="link-portfolio">Portfolio</a>
+              </li>
+              <li>
+                <a href="#about" class="link-about">About</a>
+              </li>
+              <li>
+                <a href="#contact" class="link-contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
+
+          <button id="mobile-menu-button" type="button" class="menu-btn">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+          </button>
+        </div>
       </div>
-    </div>
+    </header>
 
     <!-- Main -->
 
@@ -64,9 +68,9 @@
             contact me.
           </p>
 
-          <audio controls>
+          <!-- <audio controls>
             <source src="images/audio.mp3" type="audio/mp3" />
-          </audio>
+          </audio> -->
 
           <div class="social-links">
             <a href="#contact"> <p class="connect">LET'S CONNECT</p></a>
@@ -270,7 +274,7 @@
 
       <!-- About-Me section -->
 
-      <section id="about-me">
+      <section id="about">
         <div class="about">
           <div class="about-details">
             <h2 class="title">
@@ -358,14 +362,14 @@
               <li class="dropdown-skill">
                 <details>
                   <summary>Frameworks</summary>
+                  <i class="fa-solid fa-angle-right"></i>
                 </details>
-                <i class="fa-solid fa-angle-right"></i>
               </li>
               <li class="dropdown-skill">
                 <details>
                   <summary>Skills</summary>
+                  <i class="fa-solid fa-angle-right"></i>
                 </details>
-                <i class="fa-solid fa-angle-right"></i>
               </li>
             </ul>
           </div>
@@ -431,5 +435,6 @@
         </div>
       </section>
     </main>
+    <script src="js/main.js"></script>
   </body>
 </html>
