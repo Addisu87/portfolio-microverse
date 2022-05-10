@@ -28,7 +28,7 @@ i {
   fill: currentColor;
 }
 
-ul {
+ul li {
   list-style-type: none;
 }
 
@@ -135,16 +135,11 @@ button:hover {
   height: 70px;
 }
 
-.flex h2 {
-  color: var(--secondary-color);
-  font-size: 18px;
-  line-height: 20px;
-}
-
 .container {
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
+  padding: 0 24px;
 }
 
 .flex {
@@ -154,58 +149,93 @@ button:hover {
   height: 100%;
 }
 
-.navbar .logo {
-  color: var(--secondary-color);
-}
-
 .navbar .flex {
   justify-content: space-between;
 }
 
-.navbar .mobile-nav {
-  align-items: center;
+.navbar .logo {
+  color: var(--secondary-color);
 }
 
 .navbar a {
   color: #344563;
-  font-weight: bold;
   padding: 20px;
   margin: 0 5px;
-  line-height: 20px;
-  font-size: 15px;
 }
 
-.mobile-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: inherit;
-  background-color: var(--secondary-color);
-  color: #fff;
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 44px;
-  width: 100%;
-}
-
-.mobile-item a {
-  color: #fff;
-}
-
-.mobile-nav a:hover {
+.navbar a:hover {
   border-bottom: 2px #2a9df4 solid;
 }
 
-.desk-item {
+.menu-btn {
+  display: flex;
+  background-color: #fff;
+  align-items: flex-end;
+  border: none;
+}
+
+.menu-btn:active {
+  background-color: #fff;
+}
+
+.mobile-menu-hide {
   display: none;
 }
 
-.openMenu {
-  align-self: flex-end;
+.mobile-menu-show {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  left: 0%;
   display: flex;
-  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: 1px red solid;
+  border-radius: 20px;
+}
+
+.mobile-menu-show > ul > li {
+  margin-left: 28px;
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: 600;
   cursor: pointer;
+}
+
+.mobile-menu-show > ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  padding-inline-start: 40px;
+}
+
+.mobile-menu-show > ul > li > a {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--primary-color);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.mobile-menu-show > button {
+  margin: 0.5em 0.5em;
+  align-self: flex-end;
+  cursor: pointer;
+  background-color: var(--secondary-color);
+}
+
+.mobile-menu-show > img {
+  width: 2.5em;
+}
+
+.link-portfolio:hover,
+.link-about:hover,
+.link-contact:hover {
+  border-bottom: 2px #2a9df4 solid;
 }
 
 /* Hero section */
@@ -471,30 +501,13 @@ input:focus:invalid {
 
 @media screen and (min-width: 768px) {
   /* navbar */
-  .desk-item {
+  .mobile-menu-hide {
     display: flex;
+    flex-direction: row;
   }
 
-  .mobile-item {
-    display: none;
-  }
-
-  .container {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-  }
-
-  .desk-item a {
-    padding-right: 20px;
-    color: #344563;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 20px;
-    text-align: center;
-  }
-
-  .openMenu {
+  .menu-btn,
+  #btn-close-nav {
     display: none;
   }
 

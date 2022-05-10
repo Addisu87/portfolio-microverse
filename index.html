@@ -21,44 +21,36 @@
 
   <body>
     <!-- Navbar -->
-    <section class="toolbar">
+    <header class="header">
       <div class="navbar">
         <div class="container flex">
-          <header class="header">
-            <a href="#logo"><h2 class="logo" id="logo">My Logo</h2></a>
-          </header>
+          <a href="#logo" class="logo">My Logo</a>
 
-          <nav>
-            <div class="desk-item">
-              <div><a class="active" href="#portfolio">Portfolio</a></div>
-              <div><a href="#about">About</a></div>
-              <div><a href="#contact">Contact</a></div>
-            </div>
-            <div class="mobile-item">
-              <div class="item close">
-                <a href="#" class="closeMenu"
-                  ><i class="fa-solid fa-xmark" aria-hidden="true"></i
-                ></a>
-              </div>
-              <div class="mobile-nav">
-                <a href="#portfolio" class="closeMenu">Portfolio </a>
-              </div>
-              <div class="mobile-nav">
-                <a href="#about" class="closeMenu">About</a>
-              </div>
-              <div class="mobile-nav">
-                <a href="#contact" class="closeMenu">Contact</a>
-              </div>
-            </div>
-            <div class="item-menu">
-              <a href="#" class="openMenu"
-                ><i class="fa-solid fa-bars" aria-hidden="true"></i
-              ></a>
-            </div>
+          <nav id="mobile-menu-hide" class="mobile-menu-hide">
+            <button type="button" id="btn-close-nav">
+              <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+            <ul>
+              <li>
+                <a href="#portfolio" class="link-portfolio">Portfolio</a>
+              </li>
+              <li>
+                <a href="#about" class="link-about">About</a>
+              </li>
+              <li>
+                <a href="#contact" class="link-contact">Contact</a>
+              </li>
+            </ul>
           </nav>
+
+          <button id="mobile-menu-button" type="button" class="menu-btn">
+            <a href="#" class="openMenu"
+              ><i class="fa-solid fa-bars" aria-hidden="true"></i
+            ></a>
+          </button>
         </div>
       </div>
-    </section>
+    </header>
 
     <!-- Main -->
 
@@ -78,9 +70,9 @@
             contact me.
           </p>
 
-          <audio controls>
+          <!-- <audio controls>
             <source src="images/audio.mp3" type="audio/mp3" />
-          </audio>
+          </audio> -->
 
           <div class="social-links">
             <a href="#contact"> <p class="connect">LET'S CONNECT</p></a>
