@@ -173,72 +173,6 @@ button:hover {
   background-color: #fff;
 }
 
-.mobile-menu-hide {
-  display: none;
-}
-
-.mobile-menu-show {
-  position: absolute;
-  top: 0%;
-  right: 0%;
-  left: 0%;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  background-color: var(--secondary-color);
-  color: #fff;
-  border: 1px #2a9df4 solid;
-  border-radius: 20px;
-}
-
-.mobile-menu-show > ul > li {
-  margin-left: 28px;
-  margin-top: 40px;
-  font-size: 24px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.mobile-menu-show > ul {
-  display: block;
-  list-style-type: disc;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  padding-inline-start: 40px;
-}
-
-.mobile-menu-show > ul > li > a {
-  font-size: 24px;
-  font-weight: 600;
-  color: var(--primary-color);
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.mobile-menu-show > button {
-  margin: 0.5em 0.5em;
-  align-self: flex-end;
-  cursor: pointer;
-  background-color: var(--secondary-color);
-}
-
-.mobile-menu-show > i {
-  width: 2.5em;
-}
-
-.navbar li:hover {
-  border-bottom: 2px #2a9df4 solid;
-}
-
-.btn-close-nav {
-  color: #fff;
-}
-
-.btn-close-nav i:hover {
-  color: #2a9df4;
-}
-
 /* Hero section */
 
 .hero {
@@ -317,6 +251,68 @@ button:hover {
   align-items: center;
 }
 
+.mobile-menu-hide {
+  display: none;
+}
+
+.mobile-menu-show {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  left: 0%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: 1px #2a9df4 solid;
+  border-radius: 20px;
+}
+
+.mobile-menu-show > ul > li {
+  margin-left: 28px;
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mobile-menu-show > ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  padding-inline-start: 40px;
+}
+
+.mobile-menu-show > ul > li > a {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--primary-color);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.mobile-menu-show > button {
+  margin: 0.5em 0.5em;
+  align-self: flex-end;
+  cursor: pointer;
+  background-color: var(--secondary-color);
+}
+
+.mobile-menu-show > i {
+  width: 2.5em;
+}
+
+.btn-close-nav {
+  color: #fff;
+}
+
+.btn-close-nav i:hover {
+  color: #2a9df4;
+}
+
 .bullet_list > li:not(:last-child) {
   position: relative;
   margin-right: 16px;
@@ -332,6 +328,10 @@ button:hover {
   border-radius: 50%;
   margin-left: 4px;
   background-color: #e5e5e5;
+}
+
+.navbar li:hover {
+  border-bottom: 2px #2a9df4 solid;
 }
 
 /* About section */
