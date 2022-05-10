@@ -368,6 +368,7 @@ summary {
   background-color: var(--secondary-color);
   fill: solid;
   border-top-left-radius: 15%;
+  padding-top: 127px;
 }
 
 .contact {
@@ -378,7 +379,6 @@ summary {
   margin: auto;
   justify-content: center;
   align-items: center;
-  margin-top: 103px;
 }
 
 .contact p {
@@ -449,7 +449,6 @@ input:focus:invalid {
   display: center;
   align-items: center;
   justify-content: center;
-  margin: 32px 8px 12px 22px;
 }
 
 /* Media Queries section */
@@ -578,6 +577,10 @@ input:focus:invalid {
   }
 
   /* Contact section */
+  .address {
+    padding: 127px 0;
+  }
+
   .contact button {
     align-self: center;
     margin: auto;
@@ -610,7 +613,7 @@ input:focus:invalid {
     align-items: center;
     font-family: inherit;
     background-color: var(--secondary-color);
-    color: var(--primary-color);
+    color: #fff;
     font-weight: 600;
     font-size: 32px;
     line-height: 44px;
