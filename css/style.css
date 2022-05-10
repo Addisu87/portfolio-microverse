@@ -139,7 +139,6 @@ button:hover {
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
-  padding: 0 24px;
 }
 
 .flex {
@@ -161,10 +160,6 @@ button:hover {
   color: #344563;
   padding: 20px;
   margin: 0 5px;
-}
-
-.navbar a:hover {
-  border-bottom: 2px #2a9df4 solid;
 }
 
 .menu-btn {
@@ -193,7 +188,7 @@ button:hover {
   height: 100%;
   background-color: var(--secondary-color);
   color: #fff;
-  border: 1px red solid;
+  border: 1px #2a9df4 solid;
   border-radius: 20px;
 }
 
@@ -228,19 +223,18 @@ button:hover {
   background-color: var(--secondary-color);
 }
 
-.mobile-menu-show > img {
+.mobile-menu-show > i {
   width: 2.5em;
 }
 
-.link-portfolio:hover,
-.link-about:hover,
-.link-contact:hover {
+.navbar li:hover {
   border-bottom: 2px #2a9df4 solid;
 }
 
 .btn-close-nav {
   color: #fff;
 }
+
 .btn-close-nav i:hover {
   color: #2a9df4;
 }
@@ -510,6 +504,9 @@ input:focus:invalid {
   /* navbar */
   .mobile-menu-hide {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .menu-btn,
@@ -518,7 +515,7 @@ input:focus:invalid {
   }
 
   .mobile-menu-show {
-    background-color: #fff;
+    display: none;
   }
 
   .header {
