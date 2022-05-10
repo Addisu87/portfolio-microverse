@@ -509,6 +509,10 @@ input:focus:invalid {
     justify-content: space-between;
   }
 
+  .navbar ul {
+    display: flex;
+  }
+
   .menu-btn,
   #btn-close-nav {
     display: none;
