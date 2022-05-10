@@ -135,7 +135,7 @@ button:hover {
   height: 70px;
 }
 
-header h2 {
+.flex h2 {
   color: var(--secondary-color);
   font-size: 18px;
   line-height: 20px;
@@ -145,7 +145,6 @@ header h2 {
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
-  padding: 0 24px;
 }
 
 .flex {
@@ -155,17 +154,21 @@ header h2 {
   height: 100%;
 }
 
+.navbar .logo {
+  color: var(--secondary-color);
+}
+
 .navbar .flex {
   justify-content: space-between;
 }
 
 .navbar .mobile-nav {
   align-items: center;
-  justify-content: space-between;
 }
 
 .navbar a {
   color: #344563;
+  font-weight: bold;
   padding: 20px;
   margin: 0 5px;
   line-height: 20px;
@@ -175,14 +178,35 @@ header h2 {
 .mobile-item {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: inherit;
+  background-color: var(--secondary-color);
+  color: #fff;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+  width: 100%;
 }
 
-.mobile-nav--right {
-  margin-left: 0;
+.mobile-item a {
+  color: #fff;
+}
+
+.mobile-nav span {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .mobile-nav a:hover {
   border-bottom: 2px #2a9df4 solid;
+}
+
+.desk-item {
+  display: none;
 }
 
 .openMenu {
@@ -294,7 +318,7 @@ header h2 {
   flex-direction: column;
   overflow: hidden;
   background-color: var(--primary-color);
-  border-top-right-radius: 10%;
+  border-top-right-radius: 15%;
   margin: 114px 24px;
 }
 
@@ -362,7 +386,7 @@ summary {
 .address {
   background-image: url(/images/contact-form-background-shapes@2x.png);
   background-position: right top;
-  background-size: 100%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   position: relative;
   background-color: var(--secondary-color);
@@ -455,7 +479,7 @@ input:focus:invalid {
 
 @media screen and (min-width: 768px) {
   /* navbar */
-  .navbar .desk-item {
+  .desk-item {
     display: flex;
   }
 
@@ -463,8 +487,28 @@ input:focus:invalid {
     display: none;
   }
 
+  .container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .desk-item a {
+    padding-right: 20px;
+    color: #344563;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+  }
+
   .openMenu {
     display: none;
+  }
+
+  .header {
+    background-color: #fff;
+    border-bottom-left-radius: 15%;
   }
 
   .navbar {
@@ -602,25 +646,5 @@ input:focus:invalid {
 
   .col-rev {
     flex-direction: row-reverse;
-  }
-}
-
-@media (max-width: 768px) {
-  .mobile-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: inherit;
-    background-color: var(--secondary-color);
-    color: #fff;
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 44px;
-    width: 100%;
-  }
-
-  .desk-item {
-    display: none;
   }
 }
