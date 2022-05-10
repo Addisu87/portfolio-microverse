@@ -33,7 +33,7 @@ ul li {
 }
 
 h1 {
-  font-weight: 700 bold;
+  font-weight: 700;
   font-size: 40px;
   line-height: 52px;
   color: var(--header-color);
@@ -45,14 +45,13 @@ h2 {
   line-height: 44px;
   font-weight: 700;
   color: var(--header-color);
-  fill: solid;
 }
 
 h3 {
   font-size: 13px;
   line-height: 16px;
   font-weight: 500;
-  font-style: medium;
+  font-style: normal;
   color: var(--paragraph-color);
 }
 
@@ -157,7 +156,7 @@ button:hover {
   color: var(--secondary-color);
   font-size: 18px;
   line-height: 20px;
-  font-weight: 700, bold;
+  font-weight: 700;
 }
 
 .navbar a {
@@ -416,7 +415,6 @@ summary {
   background-repeat: no-repeat;
   position: relative;
   background-color: var(--secondary-color);
-  fill: solid;
   border-top-left-radius: 15%;
   padding-top: 127px;
 }
@@ -496,7 +494,6 @@ input:focus:invalid {
 
 .shape {
   width: 135px;
-  display: center;
   align-items: center;
   justify-content: center;
 }
@@ -539,7 +536,7 @@ input:focus:invalid {
   }
 
   h1 {
-    font-weight: 700 bold;
+    font-weight: 700;
     font-size: 48px;
     line-height: 60px;
   }
@@ -551,7 +548,7 @@ input:focus:invalid {
 
   .about-details h2 {
     font-size: 40px;
-    font-weight: 700 bold;
+    font-weight: 700;
   }
 
   header h2:hover {
@@ -632,7 +629,7 @@ input:focus:invalid {
     padding: 12px 62px 16px 12px;
     color: #253858;
     font-size: 15px;
-    font-weight: 500 medium;
+    font-weight: 500;
   }
 
   .mini-card img {
