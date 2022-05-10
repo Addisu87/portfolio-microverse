@@ -1,7 +1,6 @@
 let mobileMenu = document.querySelector('#mobile-menu-hide');
 let btnMobileMenu = document.querySelector('#mobile-menu-button');
 let btnCancelMobileMenu = document.querySelector('#btn-close-nav');
-
 const PortfolioClicked = document.querySelector('.link-portfolio');
 const AboutClicked = document.querySelector('.link-about');
 const ContactClicked = document.querySelector('.link-contact');
@@ -14,7 +13,7 @@ function displaymobilemenu() {
 }
 
 function hidemobilemenu() {
-  mobileMenu.classList.replace('mobil-menu-show', 'mobile-menu-hide');
+  mobileMenu.classList.replace('mobile-menu-show', 'mobile-menu-hide');
   page.classList.remove('noscroll');
 }
 

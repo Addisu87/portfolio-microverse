@@ -183,7 +183,7 @@ button:hover {
 }
 
 .mobile-menu-show {
-  position: absolute;
+  position: relative;
   top: 0%;
   right: 0%;
   left: 0%;
@@ -236,6 +236,13 @@ button:hover {
 .link-about:hover,
 .link-contact:hover {
   border-bottom: 2px #2a9df4 solid;
+}
+
+.btn-close-nav {
+  color: #fff;
+}
+.btn-close-nav i:hover {
+  color: #2a9df4;
 }
 
 /* Hero section */
@@ -503,12 +510,15 @@ input:focus:invalid {
   /* navbar */
   .mobile-menu-hide {
     display: flex;
-    flex-direction: row;
   }
 
   .menu-btn,
   #btn-close-nav {
     display: none;
+  }
+
+  .mobile-menu-show {
+    background-color: #fff;
   }
 
   .header {
