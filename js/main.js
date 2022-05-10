@@ -11,6 +11,4 @@ const closeMobileMenu = () => {
 document
   .querySelector('.openMenu')
   .addEventListener('click', displayMobileMenu);
-closeMobileItems.forEach((element) =>
-  element.addEventListener('click', closeMobileMenu)
-);
+closeMobileItems.forEach((element) => element.addEventListener('click', closeMobileMenu));
