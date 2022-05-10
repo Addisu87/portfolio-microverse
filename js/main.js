@@ -1,15 +1,16 @@
-// const toggle = document.getElementById('toggle');
-// const nav = document.getElementById('nav');
-// toggle.addEventListener('click', () => {
-//   nav.classList.toggle('active');
-// });
+const menuItem = document.querySelector('.mobile-item');
+const closeMobileItems = document.querySelectorAll('.closeMenu');
+const displayMobileMenu = () => {
+  menuItem.style.display = 'block';
+};
 
-// Function to toggle the bar
-function myFunction() {
-  var x = document.getElementById('myLinks');
-  if (x.style.display === 'block') {
-    x.style.display = 'none';
-  } else {
-    x.style.display = 'block';
-  }
-}
+const closeMobileMenu = () => {
+  menuItem.style.display = 'none';
+};
+
+document
+  .querySelector('.openMenu')
+  .addEventListener('click', displayMobileMenu);
+closeMobileItems.forEach((element) =>
+  element.addEventListener('click', closeMobileMenu)
+);
