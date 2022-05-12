@@ -91,18 +91,6 @@ button:hover {
   background-color: var(--secondary-color);
 }
 
-/* Label */
-.lang {
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 16px;
-  letter-spacing: 3%;
-  padding: 4px 12px;
-  color: var(--secondary-color);
-  background-color: #ebebff;
-  border-radius: 8px;
-}
-
 /* horizontal-list */
 .horizontal-list {
   display: flex;
@@ -201,58 +189,132 @@ button:hover {
   color: var(--secondary-color);
 }
 
-/* Work section */
+/* Projects - section */
 
-.works {
-  display: flex;
-  flex-direction: column;
-  padding: 12px 24px;
-  background-color: #dfe1e6;
+.project-container {
+  background-color: #e5e5e5;
+  padding-top: 114px;
+  overflow: hidden;
 }
 
-.card {
+.project-description {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border-radius: 16px;
+  border-radius: 24px;
+  justify-content: space-between;
   background-repeat: no-repeat;
-  background-color: var(--primary-color);
-  padding: 16px;
+  background-color: #fff;
+  padding: 24px;
   width: 100%;
   margin-bottom: 88px;
 }
 
-.card img {
+.project-description > *:nth-last-child() {
+  padding-bottom: 0px;
+}
+
+.project-description img {
+  left: 24px;
+  top: 24px;
   border-radius: 8px;
   width: 100%;
 }
 
-.mini-card img {
-  width: 48px;
-  height: 48px;
+.project-description img:hover {
+  transform: scale(1.1);
 }
 
-.card img:hover {
-  transform: scale(1.3);
+.project-details p {
+  overflow: wrap;
 }
 
-.card_content {
-  align-items: flex-start;
-}
-
-.card_content > *:not(:last-child) {
-  margin-bottom: 12px;
-}
-
-.bullet_list {
+.experience {
   display: flex;
+  flex-direction: flex-start;
   align-items: center;
+  justify-content: space-evenly;
+  color: #7a869a;
 }
 
-.bullet_list > li {
-  display: flex;
-  align-items: center;
+.experience .canopy {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #344563;
 }
+
+.experience a {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  color: #7a869a;
+}
+
+.experience img {
+  width: 8px;
+  height: 8px;
+  background-color: #c1c7d0;
+}
+
+.technology {
+  display: flex;
+  flex-direction: row;
+  float: left;
+  align-items: center;
+  padding: 4px 12px;
+}
+
+.technology a {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 3%;
+  padding: 5px 10px;
+  color: var(--secondary-color);
+  background-color: #ebebff;
+  border-radius: 8px;
+}
+
+/* Modal */
+
+.projectPopup {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  overflow: auto;
+  padding: 77px 142px;
+  background-color: #c1c7d0;
+}
+
+.project-item {
+  background-color: #fff;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Mobile-menu */
 
 .mobile-menu-hide {
   display: none;
@@ -313,23 +375,6 @@ button:hover {
 
 .btn-close-nav i:hover {
   color: #2a9df4;
-}
-
-.bullet_list > li:not(:last-child) {
-  position: relative;
-  margin-right: 16px;
-}
-
-.bullet_list > li:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  top: calc(50% - 20%);
-  left: 100%;
-  height: 8px;
-  width: 10px;
-  border-radius: 50%;
-  margin-left: 4px;
-  background-color: #e5e5e5;
 }
 
 .navbar li:hover {
@@ -393,6 +438,11 @@ summary {
   border-radius: 8px;
   align-items: center;
   margin-bottom: 10px;
+}
+
+.mini-card img {
+  width: 48px;
+  height: 48px;
 }
 
 .mini-card *:first-child {
@@ -492,6 +542,24 @@ input:focus:invalid {
   box-shadow: none;
 }
 
+#error-msg {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: red;
+  display: flex;
+  align-items: baseline;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.sub-flex {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
 .shape {
   width: 135px;
   align-items: center;
@@ -567,35 +635,81 @@ input:focus:invalid {
     margin: 200px auto;
   }
 
-  /* work section */
+  /* projects section */
 
-  .works {
-    margin: 0;
-    padding: 142px;
-  }
-
-  .works :last-child {
-    margin-bottom: 0;
-  }
-
-  .card {
+  .project-description {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 142px;
+    gap: 46px;
   }
 
-  .card_img {
-    width: 70%;
-    height: 80%;
-    padding: 23px;
+  .project-description img {
+    left: 24px;
+    top: 24px;
+    border-radius: 8px;
+    width: 85%;
   }
 
-  .card_content {
-    width: 60%;
-    padding: 23px;
+  .project-details {
+    padding: 48px 46px 0 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-details .experience {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .project-details > p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    margin-top: 32px;
+    margin-bottom: 24px;
+  }
+
+  .project-details .btn-project {
+    margin-top: 52px;
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  /* popup window */
+  .project-tags > div {
+    margin-left: 10px;
+  }
+
+  .tags > ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-left: 5px;
+    margin-top: 15px;
+  }
+
+  .btn-tags {
+    border-top: 1px solid rgb(236 234 234);
+    padding-top: 20px;
+  }
+
+  a.btn-see-project {
+    text-decoration: none;
+    color: #4053fc;
+  }
+
+  .btn-see-project {
+    border: 1px solid #396df2;
+    padding: 7px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: capitalize;
+    font-family: Poppins, sans-serif;
+    transition-duration: 0.4s;
+    margin: 0 5px;
   }
 
   /* About Me Section */
@@ -658,6 +772,21 @@ input:focus:invalid {
 
   .shape {
     display: none;
+  }
+
+  #error-msg {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: red;
+    display: flex;
+    align-items: center;
+  }
+
+  .sub-flex {
+    display: flex;
+    align-content: center;
   }
 
   .col-rev {
