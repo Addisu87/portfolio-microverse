@@ -41,6 +41,8 @@ h1 {
 }
 
 h2 {
+  font-family: 'Poppins';
+  font-style: normal;
   font-size: 32px;
   line-height: 44px;
   font-weight: 700;
@@ -286,32 +288,82 @@ button:hover {
   display: none;
   position: absolute;
   z-index: 1;
-  left: 0;
-  top: 0;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
   width: 100vw;
-  height: 100%;
-  overflow: auto;
-  padding: 77px 142px;
+  height: 100vh;
+  overflow: hidden;
+  padding: 60px 16px 50px 16px;
   background-color: #c1c7d0;
 }
 
 .project-item {
   background-color: #fff;
+  padding: 18px 16px;
+  border: 1px solid #dfe1e6;
+  border-radius: 16px;
+  height: 100%;
 }
 
 /* The Close Button */
 .close {
-  color: #aaa;
+  color: #67798e;
   float: right;
   font-size: 28px;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: #2a9df4;
   text-decoration: none;
   cursor: pointer;
+}
+
+.project-item img {
+  margin-top: 20px;
+}
+
+.project-item p {
+  font-weight: 400;
+  font-size: 15px;
+  color: #344563;
+  flex: wrap;
+}
+
+.project-item .technology {
+  display: block;
+}
+
+.btn-tags {
+  border-top: 1px solid rgb(236 234 234);
+  padding-top: 20px;
+  padding-left: 20px;
+  display: inline-block;
+}
+
+.btn-tags i {
+  color: #6070ff;
+  padding-left: 10px;
+}
+
+a.btn-see-project {
+  text-decoration: none;
+  color: #4053fc;
+}
+
+.btn-see-project {
+  border: 1px solid #396df2;
+  padding: 7px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: capitalize;
+  font-family: Poppins, sans-serif;
+  transition-duration: 0.4s;
+  margin: 0px 5px;
 }
 
 /* Mobile-menu */
@@ -641,6 +693,7 @@ input:focus:invalid {
     display: flex;
     flex-direction: row;
     gap: 46px;
+    box-sizing: border-box;
   }
 
   .project-description img {
@@ -668,48 +721,56 @@ input:focus:invalid {
     font-size: 17px;
     line-height: 24px;
     margin-top: 32px;
-    margin-bottom: 24px;
+    margin-bottom: 12px;
   }
 
   .project-details .btn-project {
-    margin-top: 52px;
+    margin-top: 25px;
     font-size: 17px;
     font-weight: 500;
   }
 
-  /* popup window */
-  .project-tags > div {
-    margin-left: 10px;
+  /* Project Modal */
+
+  .projectPopup {
+    padding: 77px 144px;
+    height: 100%;
   }
 
-  .tags > ul {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    margin-left: 5px;
-    margin-top: 15px;
+  .project-item .project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .btn-tags {
-    border-top: 1px solid rgb(236 234 234);
-    padding-top: 20px;
+  .project-item .project-grid > *:first-child {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 3;
+    position: center;
+    width: 50%;
   }
 
-  a.btn-see-project {
-    text-decoration: none;
-    color: #4053fc;
+  .project-item .project-grid > *:nth-child(2) {
+    grid-column: 1 / span 2;
+    grid-row: 4 / span 2;
+    padding-left: 24px;
+  }
+  .project-item .project-grid > *:nth-child(3) {
+    grid-column: 3 / span 1;
+    grid-row: 4 / span 1;
   }
 
-  .btn-see-project {
-    border: 1px solid #396df2;
-    padding: 7px;
-    border-radius: 8px;
+  .project-item .project-grid > *:last-child {
+    grid-column: 3 / span 1;
+    grid-row: 5 / span 1;
+  }
+
+  .project-item p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
     font-size: 16px;
-    font-weight: 300;
-    text-transform: capitalize;
-    font-family: Poppins, sans-serif;
-    transition-duration: 0.4s;
-    margin: 0 5px;
+    line-height: 30px;
+    color: #344563;
   }
 
   /* About Me Section */

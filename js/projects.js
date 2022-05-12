@@ -119,35 +119,33 @@ const displayPopupModal = (i) => {
   }
 
   document.querySelector('.projectPopup').innerHTML = `
-  <div class="project-item>
-    <div class="project-flex" >
-      <h2>${projects[i].name}</h2>
-      <span> <a onclick="closePopupModal()" href="#" class="close">&times;</a></span>
-    </div>
+    <div class="project-item">
+      <div class="project-menu" >
+        <h2>${projects[i].name}
+        <span> <a onclick="closePopupModal()" href="#" class="close">&times;</a></span></h2>
+      </div>
 
-    <ul class="experience">
-      ${experienceList}
-    </ul>
+      <ul class="experience">
+        ${experienceList}
+      </ul>
+      
+      <div class="project-grid">
+      <img src=${projects[i].image} alt="${projects.name}">
 
-    <img src=${projects[i].image} alt="${projects.name}">
+        <p>${projects[i].popDescription}</p>
 
-    <div class="project-content">
-
-      <p>${projects[i].popDescription}</p>
-
-      <div class="tags">
         <ul class="technology">
-          ${techPop}
+          ${tech}
         </ul>
+        
+        <div class="btn-tags">
+          <a href="${projects[i].seeLive}" class="btn-see-project">See Live<i class="fa fa-external-link" aria-hidden="true"></i>
+          </a>
+          <a href="${projects[i].seeSource}" class="btn-see-project">See Source<i class="fa fa-github-square" aria-hidden="true"></i>
+          </a>
+        </div>
       </div>
-      <div class="btn-tags">
-        <a href="${projects[i].seeLive}" class="btn-see-project">See Live<i class="fa fa-external-link" aria-hidden="true"></i>
-        </a>
-        <a href="${projects[i].seeSource}" class="btn-see-project">See Source<i class="fa fa-github-square" aria-hidden="true"></i>
-        </a>
-      </div>
-   </div>
-  </div>
+    </div>
   `;
   popupModal.style.display = 'block';
 };
