@@ -663,4 +663,37 @@ input:focus:invalid {
   .col-rev {
     flex-direction: row-reverse;
   }
+
+  #error-msg {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: red;
+    display: flex;
+    align-items: center;
+  }
+
+  .sub-flex {
+    display: flex;
+    align-content: center;
+  }
+}
+
+#error-msg {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: red;
+  display: flex;
+  align-items: baseline;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.sub-flex {
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }

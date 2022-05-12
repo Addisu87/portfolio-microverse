@@ -389,7 +389,8 @@
           <form
             action="https://formspree.io/f/xgedpywn"
             method="post"
-            id="form"
+            id="contact-form"
+            class="desk-form"
           >
             <div class="form-group">
               <label for="name">Name:</label>
@@ -409,7 +410,7 @@
                 type="email"
                 id="email"
                 name="email"
-                placeholder="Email"
+                placeholder="Email address"
                 required
               />
             </div>
@@ -421,20 +422,24 @@
                 id="msg"
                 maxlength="500"
                 cols="30"
-                rows="5"
+                rows="10"
                 placeholder="Write your message here"
                 required
               ></textarea>
             </div>
 
-            <button class="btn btn_submit" type="submit" value="send">
-              Get It Touch
-            </button>
-            <img class="shape" src="images/Shape.svg" alt="" />
+            <div class="sub-flex">
+              <button class="btn btn_submit" type="submit" value="send">
+                Get It Touch
+              </button>
+              <div id="div-error"><p id="error-msg"></p></div>
+            </div>
           </form>
+          <img class="shape" src="images/Shape.svg" alt="" />
         </div>
       </section>
     </main>
     <script src="js/main.js"></script>
+    <script src="js/form-validation.js"></script>
   </body>
 </html>
