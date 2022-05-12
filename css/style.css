@@ -665,7 +665,7 @@ input:focus:invalid {
   }
 
   #error-msg {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -681,13 +681,13 @@ input:focus:invalid {
 }
 
 #error-msg {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   color: red;
   display: flex;
-  align-items:baseline;
+  align-items: baseline;
   margin-top: 0;
   padding-top: 0;
 }
