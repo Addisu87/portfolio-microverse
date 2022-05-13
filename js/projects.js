@@ -103,19 +103,20 @@ for (let i = 0; i < projects.length; i += 1) {
 
 const popupModal = document.querySelector('#projectPopup');
 const displayPopupModal = (i) => {
-  let tech = '';
   let techPop = '';
   let experienceList = '';
 
   for (let j = 0; j < projects[i].popupTech.length; j += 1) {
-    tech += `<li class="technology"><a href="#">${projects[i].popupTech[j]}</a></li>`;
+    techPop += `<li class="technology"><a href="#">${projects[i].popupTech[j]}</a></li>`;
   }
 
   for (let k = 0; k < projects[i].experience.length; k += 1) {
     experienceList +=
       k === 0
-        ? `<li>${projects[i].experience[k]}</li>`
-        : `<li>${projects[i].experience[k]}</li>`;
+        ? `<li><a href="#" class="canopy">${projects[i].experience[k]}</a></li>`
+        : `<li ><a href="#">${projects[i].experience[k]}</a></li>`;
+    if (k !== projects[i].experience.length - 1)
+      experienceList += `<li><a href="#"><img src="/images/Counter.png" alt="dot"></a></li>`;
   }
 
   document.querySelector('.projectPopup').innerHTML = `
@@ -140,7 +141,7 @@ const displayPopupModal = (i) => {
     
       <div class="right-side">
         <ul class="technology">
-          ${tech}
+          ${techPop}
         </ul>
         
         <div class="btn-tags">
