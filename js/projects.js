@@ -160,7 +160,7 @@ const displayPopupModal = (i) => {
   popupModal.style.display = 'block';
 };
 
-const closePopupModal = () => {
+const closePopupModal = (i) => {
   popupModal.style.display = 'none';
 };
 
