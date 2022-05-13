@@ -41,8 +41,6 @@ h1 {
 }
 
 h2 {
-  font-family: inherit;
-  font-style: normal;
   font-size: 32px;
   line-height: 44px;
   font-weight: 700;
@@ -91,6 +89,18 @@ button {
 button:hover {
   color: var(--primary-color);
   background-color: var(--secondary-color);
+}
+
+/* Label */
+.lang {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 3%;
+  padding: 4px 12px;
+  color: var(--secondary-color);
+  background-color: #ebebff;
+  border-radius: 8px;
 }
 
 /* horizontal-list */
@@ -191,35 +201,30 @@ button:hover {
   color: var(--secondary-color);
 }
 
-/* Projects - section */
+/* Work section */
 
-.project-container {
-  background-color: #e5e5e5;
-  padding: 26px 0;
+.works {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 24px;
+  background-color: #dfe1e6;
 }
 
-.project-description {
+.card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border-radius: 24px;
-  justify-content: space-between;
+  border-radius: 16px;
   background-repeat: no-repeat;
-  background-color: #fff;
-  margin: 44px 12px;
+  background-color: var(--primary-color);
+  padding: 16px;
+  width: 100%;
+  margin-bottom: 88px;
 }
 
-.project-description img {
-  left: 24px;
-  top: 24px;
+.card img {
   border-radius: 8px;
   width: 100%;
-}
-
-.experience img {
-  width: 8px;
-  height: 8px;
-  background-color: #c1c7d0;
 }
 
 .mini-card img {
@@ -227,139 +232,27 @@ button:hover {
   height: 48px;
 }
 
-.project-description img:hover {
-  transform: scale(1.1);
+.card img:hover {
+  transform: scale(1.3);
 }
 
-.project-details {
-  margin: 16px;
-  overflow: hidden;
-  width: 90%;
+.card_content {
+  align-items: flex-start;
 }
 
-.experience {
+.card_content > *:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.bullet_list {
   display: flex;
-  color: #7a869a;
   align-items: center;
 }
 
-.experience .canopy {
-  font-family: inherit;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 24px;
-  color: #344563;
-}
-
-.experience a {
-  font-family: inherit;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 16px;
-  color: #7a869a;
-}
-
-.technology {
+.bullet_list > li {
   display: flex;
-  flex-direction: row;
-  float: left;
   align-items: center;
-  padding: 4px;
 }
-
-.technology a {
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 16px;
-  letter-spacing: 3%;
-  padding: 5px 10px;
-  color: var(--secondary-color);
-  background-color: #ebebff;
-  border-radius: 8px;
-}
-
-/* Modal */
-
-.projectPopup {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #c1c7d0;
-  overflow: hidden;
-}
-
-.project-item {
-  background-color: #fff;
-  padding: 24px;
-  border: 1px solid #dfe1e6;
-  border-radius: 16px;
-}
-
-/* The Close Button */
-.close {
-  color: #67798e;
-  float: right;
-  font-size: 28px;
-  font-weight: 500;
-}
-
-.close:hover,
-.close:focus {
-  color: #2a9df4;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.experience li {
-  padding: 4px;
-}
-
-.project-item p {
-  font-weight: 400;
-  font-size: 15px;
-  color: #344563;
-}
-
-.project-item .technology {
-  display: block;
-}
-
-.btn-tags {
-  border-top: 1px solid rgb(236 234 234);
-  padding-top: 30px;
-  display: inline-block;
-}
-
-.btn-tags i {
-  color: #6070ff;
-  padding-left: 10px;
-}
-
-a.btn-see-project {
-  text-decoration: none;
-  color: #4053fc;
-}
-
-.btn-see-project {
-  border: 1px solid #396df2;
-  padding: 6px;
-  border-radius: 8px;
-  font-size: 17px;
-  font-weight: 400;
-  font-family: Poppins, sans-serif;
-  transition-duration: 0.4s;
-  margin: 0 4px;
-}
-
-/* Mobile-menu */
 
 .mobile-menu-hide {
   display: none;
@@ -420,6 +313,23 @@ a.btn-see-project {
 
 .btn-close-nav i:hover {
   color: #2a9df4;
+}
+
+.bullet_list > li:not(:last-child) {
+  position: relative;
+  margin-right: 16px;
+}
+
+.bullet_list > li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 20%);
+  left: 100%;
+  height: 8px;
+  width: 10px;
+  border-radius: 50%;
+  margin-left: 4px;
+  background-color: #e5e5e5;
 }
 
 .navbar li:hover {
@@ -582,6 +492,12 @@ input:focus:invalid {
   box-shadow: none;
 }
 
+.shape {
+  width: 135px;
+  align-items: center;
+  justify-content: center;
+}
+
 #error-msg {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
@@ -589,21 +505,12 @@ input:focus:invalid {
   font-size: 16px;
   color: red;
   display: flex;
-  align-items: baseline;
-  margin-top: 0;
-  padding-top: 0;
+  align-items: center;
 }
 
 .sub-flex {
   display: flex;
   align-content: center;
-  justify-content: center;
-}
-
-.shape {
-  width: 135px;
-  align-items: center;
-  justify-content: center;
 }
 
 /* Media Queries section */
@@ -675,75 +582,35 @@ input:focus:invalid {
     margin: 200px auto;
   }
 
-  /* projects section */
+  /* work section */
 
-  .project-description {
-    display: flex;
-    flex-direction: row;
-    gap: 46px;
-    margin: 142px;
+  .works {
+    margin: 0;
+    padding: 142px;
   }
 
-  .project-description img {
-    border-radius: 8px;
+  .works :last-child {
+    margin-bottom: 0;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
+    margin-bottom: 142px;
   }
 
-  .project-details {
-    display: flex;
-    flex-direction: column;
+  .card_img {
+    width: 70%;
+    height: 80%;
+    padding: 23px;
   }
 
-  .experience li {
-    display: flex;
-    flex-direction: row;
-    font-size: 18px;
-    color: #6b778c;
-  }
-
-  .project-details > p {
-    font-family: inherit;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 24px;
-  }
-
-  .project-details .btn-project {
-    margin-top: 25px;
-    font-size: 17px;
-    font-weight: 500;
-  }
-
-  .project-item .project-grid {
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* popup desktop */
-  .project-item {
-    margin: 77px 142px;
-  }
-
-  .image-container {
-    width: 50%;
-    height: 50vh;
-    overflow: hidden;
-    margin: 0 auto;
-  }
-
-  .project-item p {
-    font-family: inherit;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 30px;
-    color: #344563;
-  }
-
-  .content-container {
-    display: flex;
-    gap: 36px;
+  .card_content {
+    width: 60%;
+    padding: 23px;
   }
 
   /* About Me Section */
@@ -808,5 +675,7 @@ input:focus:invalid {
     display: none;
   }
 
-  /* Row reverse for projects */
+  .col-rev {
+    flex-direction: row-reverse;
+  }
 }
