@@ -823,4 +823,6 @@ input:focus:invalid {
     display: flex;
     align-content: center;
   }
+
+  /* Row reverse for projects */
 }
