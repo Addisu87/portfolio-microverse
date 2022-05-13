@@ -195,8 +195,7 @@ button:hover {
 
 .project-container {
   background-color: #e5e5e5;
-  padding-top: 114px;
-  overflow: hidden;
+  padding: 26px 0px;
 }
 
 .project-description {
@@ -207,13 +206,7 @@ button:hover {
   justify-content: space-between;
   background-repeat: no-repeat;
   background-color: #fff;
-  padding: 24px;
-  width: 100%;
-  margin-bottom: 88px;
-}
-
-.project-description > *:nth-last-child() {
-  padding-bottom: 0px;
+  margin: 44px 12px;
 }
 
 .project-description img {
@@ -227,16 +220,19 @@ button:hover {
   transform: scale(1.1);
 }
 
-.project-details p {
-  overflow: wrap;
+.project-details {
+  margin: 16px;
+  overflow: hidden;
+  width: 90%;
 }
 
 .experience {
   display: flex;
   flex-direction: flex-start;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   color: #7a869a;
+  margin-bottom: 18px;
 }
 
 .experience .canopy {
@@ -268,7 +264,7 @@ button:hover {
   flex-direction: row;
   float: left;
   align-items: center;
-  padding: 4px 12px;
+  padding: 4px;
 }
 
 .technology a {
@@ -286,25 +282,23 @@ button:hover {
 
 .projectPopup {
   display: none;
-  position: absolute;
+  position: fixed;
   z-index: 1;
   left: 0px;
   right: 0px;
   top: 0px;
   bottom: 0px;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  padding: 60px 16px 50px 16px;
+  width: 100%;
+  height: 100%;
   background-color: #c1c7d0;
+  overflow: hidden;
 }
 
 .project-item {
   background-color: #fff;
-  padding: 18px 16px;
+  padding: 24px;
   border: 1px solid #dfe1e6;
   border-radius: 16px;
-  height: 100%;
 }
 
 /* The Close Button */
@@ -322,6 +316,10 @@ button:hover {
   cursor: pointer;
 }
 
+.experience li {
+  padding: 4px;
+}
+
 .project-item img {
   margin-top: 20px;
 }
@@ -330,7 +328,6 @@ button:hover {
   font-weight: 400;
   font-size: 15px;
   color: #344563;
-  flex: wrap;
 }
 
 .project-item .technology {
@@ -356,14 +353,13 @@ a.btn-see-project {
 
 .btn-see-project {
   border: 1px solid #396df2;
-  padding: 7px;
+  padding: 6px;
   border-radius: 8px;
-  font-size: 16px;
-  font-weight: 300;
-  text-transform: capitalize;
+  font-size: 17px;
+  font-weight: 400;
   font-family: Poppins, sans-serif;
   transition-duration: 0.4s;
-  margin: 0px 5px;
+  margin: 0px 4px;
 }
 
 /* Mobile-menu */
@@ -693,25 +689,22 @@ input:focus:invalid {
     display: flex;
     flex-direction: row;
     gap: 46px;
-    box-sizing: border-box;
+    padding: 24px 22px;
   }
 
   .project-description img {
-    left: 24px;
-    top: 24px;
     border-radius: 8px;
-    width: 85%;
+    width: 100%;
   }
 
   .project-details {
-    padding: 48px 46px 0 0;
     display: flex;
     flex-direction: column;
   }
 
-  .project-details .experience {
+  .experience li {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
   }
 
   .project-details > p {
@@ -720,8 +713,6 @@ input:focus:invalid {
     font-weight: 400;
     font-size: 17px;
     line-height: 24px;
-    margin-top: 32px;
-    margin-bottom: 12px;
   }
 
   .project-details .btn-project {
@@ -730,38 +721,18 @@ input:focus:invalid {
     font-weight: 500;
   }
 
-  /* Project Modal */
-
-  .projectPopup {
-    padding: 77px 144px;
-    height: 100%;
-  }
-
   .project-item .project-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: column;
   }
 
-  .project-item .project-grid > *:first-child {
-    grid-column: 1 / span 3;
-    grid-row: 1 / span 3;
-    position: center;
+  /* popup desktop */
+
+  .image-container {
     width: 50%;
-  }
-
-  .project-item .project-grid > *:nth-child(2) {
-    grid-column: 1 / span 2;
-    grid-row: 4 / span 2;
-    padding-left: 24px;
-  }
-  .project-item .project-grid > *:nth-child(3) {
-    grid-column: 3 / span 1;
-    grid-row: 4 / span 1;
-  }
-
-  .project-item .project-grid > *:last-child {
-    grid-column: 3 / span 1;
-    grid-row: 5 / span 1;
+    height: 50vh;
+    overflow: hidden;
+    margin: auto;
   }
 
   .project-item p {
@@ -771,6 +742,11 @@ input:focus:invalid {
     font-size: 16px;
     line-height: 30px;
     color: #344563;
+  }
+
+  .content-container {
+    display: flex;
+    gap: 36px;
   }
 
   /* About Me Section */

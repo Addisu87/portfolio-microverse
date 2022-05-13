@@ -130,10 +130,15 @@ const displayPopupModal = (i) => {
       </ul>
       
       <div class="project-grid">
-      <img src=${projects[i].image} alt="${projects.name}">
+      <div class="image-container">
+        <img src=${projects[i].image} alt="${projects.name}">
+      </div>
+    
 
-        <p>${projects[i].popDescription}</p>
-
+      <div class="content-container">
+      <p>${projects[i].popDescription}</p>
+    
+      <div class="right-side">
         <ul class="technology">
           ${tech}
         </ul>
@@ -144,6 +149,9 @@ const displayPopupModal = (i) => {
           <a href="${projects[i].seeSource}" class="btn-see-project">See Source<i class="fa fa-github-square" aria-hidden="true"></i>
           </a>
         </div>
+      </div>
+        
+          </div>
       </div>
     </div>
   `;
