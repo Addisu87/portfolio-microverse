@@ -823,8 +823,4 @@ input:focus:invalid {
     display: flex;
     align-content: center;
   }
-
-  .col-rev {
-    flex-direction: row-reverse;
-  }
 }

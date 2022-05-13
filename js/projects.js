@@ -76,9 +76,9 @@ for (let i = 0; i < projects.length; i += 1) {
   }
 
   document.querySelector('.project-container').innerHTML += `
-    <div class="project-description">
-     <img src=${projects[i].image} alt="${projects[i].name}" >
-     <div class="project-details">
+    <div class="project-description" id="project-1">
+    <img src=${projects[i].image} alt="${projects[i].name}" >
+    <div class="project-details">
         <h2>${projects[i].name}</h2>
         <ul class="experience">
           ${experienceList}
@@ -150,9 +150,6 @@ const displayPopupModal = (i) => {
           <a href="${projects[i].seeSource}" class="btn-see-project">See Source<i class="fa fa-github-square" aria-hidden="true"></i>
           </a>
         </div>
-      </div>
-        
-          </div>
       </div>
     </div>
   `;
