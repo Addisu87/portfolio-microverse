@@ -206,6 +206,7 @@ button:hover {
   background-repeat: no-repeat;
   background-color: #fff;
   margin: 44px 12px;
+  padding: 24px;
 }
 
 .project-description img {
@@ -240,6 +241,10 @@ button:hover {
   display: flex;
   color: #7a869a;
   align-items: center;
+}
+
+.experience li {
+  padding: 3px;
 }
 
 .experience .canopy {
@@ -313,10 +318,6 @@ button:hover {
   color: #2a9df4;
   text-decoration: none;
   cursor: pointer;
-}
-
-.experience li {
-  padding: 4px;
 }
 
 .project-item p {
@@ -678,6 +679,16 @@ input:focus:invalid {
     flex-direction: row;
     gap: 46px;
     margin: 142px;
+  }
+
+  #project-1,
+  #project-3 {
+    flex-direction: row;
+  }
+
+  #project-2,
+  #project-4 {
+    flex-direction: row-reverse;
   }
 
   .project-description img {

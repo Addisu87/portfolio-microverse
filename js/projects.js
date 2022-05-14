@@ -11,7 +11,7 @@ const projects = [
     technologies: ['html', 'Ruby on rails', 'css', 'javascript'],
     popupTech: ['html', 'css', 'javaScript', 'github', 'Ruby', 'Bootstrap'],
     seeLive: '#',
-    seeSource: '#',
+    seeSource: '#'
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const projects = [
     technologies: ['html', 'Ruby on rails', 'css', 'javascript'],
     popupTech: ['html', 'css', 'javaScript', 'github', 'Ruby', 'Bootstrap'],
     seeLive: '#',
-    seeSource: '#',
+    seeSource: '#'
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ const projects = [
     technologies: ['html', 'Ruby on rails', 'css', 'javascript'],
     popupTech: ['html', 'css', 'javaScript', 'github', 'Ruby', 'Bootstrap'],
     seeLive: '#',
-    seeSource: '#',
+    seeSource: '#'
   },
   {
     id: 4,
@@ -53,8 +53,8 @@ const projects = [
     technologies: ['html', 'Ruby on rails', 'css', 'javascript'],
     popupTech: ['html', 'css', 'javaScript', 'github', 'Ruby', 'Bootstrap'],
     seeLive: '#',
-    seeSource: '#',
-  },
+    seeSource: '#'
+  }
 ];
 
 /* Populate object to html elements when the page loads */
@@ -67,18 +67,18 @@ for (let i = 0; i < projects.length; i += 1) {
   }
 
   for (let k = 0; k < projects[i].experience.length; k += 1) {
-    experienceList
-      += k === 0
+    experienceList +=
+      k === 0
         ? `<li><a href="#" class="canopy">${projects[i].experience[k]}</a></li>`
         : `<li ><a href="#">${projects[i].experience[k]}</a></li>`;
     if (k !== projects[i].experience.length - 1) {
-      experienceList
-        += '<li><a href="#"><img src="/images/Counter.png" alt="dot"></a></li>';
+      experienceList +=
+        '<li><a href="#"><img src="/images/Counter.png" alt="dot"></a></li>';
     }
   }
 
   document.querySelector('.project-container').innerHTML += `
-    <div class="project-description" id="project-1">
+    <div class="project-description" id="project-${projects[i].id}">
     <img src=${projects[i].image} alt="${projects[i].name}" >
     <div class="project-details">
         <h2>${projects[i].name}</h2>
@@ -113,13 +113,13 @@ const displayPopupModal = (i) => {
   }
 
   for (let k = 0; k < projects[i].experience.length; k += 1) {
-    experienceList
-      += k === 0
+    experienceList +=
+      k === 0
         ? `<li><a href="#" class="canopy">${projects[i].experience[k]}</a></li>`
         : `<li ><a href="#">${projects[i].experience[k]}</a></li>`;
     if (k !== projects[i].experience.length - 1) {
-      experienceList
-        += '<li><a href="#"><img src="/images/Counter.png" alt="dot"></a></li>';
+      experienceList +=
+        '<li><a href="#"><img src="/images/Counter.png" alt="dot"></a></li>';
     }
   }
 
@@ -164,12 +164,16 @@ const closePopupModal = () => {
   popupModal.style.display = 'none';
 };
 
-document.querySelectorAll('.btn-see-project').forEach((element) => element.addEventListener('click', () => {
-  displayPopupModal(element.getAttribute('data-index'));
-}));
+document.querySelectorAll('.btn-see-project').forEach((element) =>
+  element.addEventListener('click', () => {
+    displayPopupModal(element.getAttribute('data-index'));
+  })
+);
 
-document.querySelectorAll('.close').forEach((element) => element.addEventListener('click', () => {
-  closePopupModal(element.getAttribute('data-index'));
-}));
+document.querySelectorAll('.close').forEach((element) =>
+  element.addEventListener('click', () => {
+    closePopupModal(element.getAttribute('data-index'));
+  })
+);
 
 /* End of display popup modal */
