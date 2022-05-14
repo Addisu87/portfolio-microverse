@@ -337,7 +337,6 @@ button:hover {
 
 .btn-tags i {
   color: #6070ff;
-  padding-left: 10px;
 }
 
 a.btn-see-project {
@@ -347,7 +346,7 @@ a.btn-see-project {
 
 .btn-see-project {
   border: 1px solid #396df2;
-  padding: 6px;
+  padding: 4px;
   border-radius: 8px;
   font-size: 17px;
   font-weight: 400;

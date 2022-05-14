@@ -71,7 +71,10 @@ for (let i = 0; i < projects.length; i += 1) {
       += k === 0
         ? `<li><a href="#" class="canopy">${projects[i].experience[k]}</a></li>`
         : `<li ><a href="#">${projects[i].experience[k]}</a></li>`;
-    if (k !== projects[i].experience.length - 1) experienceList += '<li><a href="#"><img src="/images/Counter.png" alt="dot"></a></li>';
+    if (k !== projects[i].experience.length - 1) {
+      experienceList
+        += '<li><a href="#"><img src="/images/Counter.png" alt="dot"></a></li>';
+    }
   }
 
   document.querySelector('.project-container').innerHTML += `
@@ -114,7 +117,10 @@ const displayPopupModal = (i) => {
       += k === 0
         ? `<li><a href="#" class="canopy">${projects[i].experience[k]}</a></li>`
         : `<li ><a href="#">${projects[i].experience[k]}</a></li>`;
-    if (k !== projects[i].experience.length - 1) experienceList += '<li><a href="#"><img src="/images/Counter.png" alt="dot"></a></li>';
+    if (k !== projects[i].experience.length - 1) {
+      experienceList
+        += '<li><a href="#"><img src="/images/Counter.png" alt="dot"></a></li>';
+    }
   }
 
   document.querySelector('.projectPopup').innerHTML = `
