@@ -240,7 +240,7 @@ button:hover {
   display: flex;
   color: #7a869a;
   align-items: center;
-  margin-bottom: 36px;
+  margin-bottom: 20px;
 }
 
 .experience li {
@@ -264,9 +264,7 @@ button:hover {
 }
 
 .technology {
-  display: flex;
-  flex-direction: row;
-  float: left;
+  display: inline-block;
   align-items: center;
   margin: 4px;
 }
@@ -327,7 +325,7 @@ button:hover {
   color: #344563;
 }
 
-.project-item .technology {
+.project-item .techno {
   display: block;
 }
 
@@ -338,8 +336,8 @@ button:hover {
 }
 
 .btn-tags i {
-  color: #6070ff;
-  padding: 12px;
+  color: hsl(234, 100%, 69%);
+  padding: 4px;
 }
 
 a.btn-see-project {
@@ -351,11 +349,12 @@ a.btn-see-project {
   border: 1px solid #396df2;
   padding: 4px;
   border-radius: 8px;
-  font-size: 16px;
-  font-weight: 300;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
   font-family: Poppins, sans-serif;
   transition-duration: 0.4s;
-  margin: 0 5px;
+  margin: 0 4px;
 }
 
 /* Mobile-menu */
@@ -744,7 +743,8 @@ input:focus:invalid {
     font-size: 16px;
     line-height: 30px;
     color: #344563;
-    margin-right: 24px;
+    padding: 24px;
+    width: 100%;
   }
 
   .content-container {
