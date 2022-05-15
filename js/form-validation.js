@@ -1,4 +1,4 @@
-// Form Validation
+// Contact Form Validation
 
 const form = document.getElementById('contact-form');
 const divError = document.getElementById('div-error');
@@ -19,44 +19,36 @@ form.addEventListener('submit', (e) => {
 });
 
 // Local Storage
-const emailErrorMessage = 'Please enter email address in small letters.';
-const contactForm = document.getElementById('contact-form');
-const emailContainer = document.getElementById('email-container');
-const emailInput = document.getElementById('email');
-const errorMessageContainer = document.querySelector('error-msg');
-const formElement = document.querySelectorAll(
-  'textarea.form-group, form-group > input'
-);
+const username = document.getElementById('name');
+const email = document.getElementById('email');
+const message = document.getElementById('msg');
+const formButton = document.getElementById('formButton');
 
-let formData = { name: '', email: '', msg: '' };
-if (localStorage.getItem('formData') !== null) {
-  formData = JSON.parse(localStorage.getItem('formData'));
+function storeData() {
+  const nameValue = username.value;
+  const emailValue = email.value;
+  const messageValue = message.value;
+  const user = {
+    nameValue,
+    emailValue,
+    messageValue
+  };
+  if (nameValue && emailValue && messageValue) {
+    const stringedUser = JSON.stringify(user);
+    localStorage.setItem('user', stringedUser);
+  }
 }
 
-const validateEmail = () => {
-  const lowercaseEmail = emailInput.value.toLowerCase();
-  if (lowercaseEmail !== emailInput.value) {
-    emailContainer.classList.add('email-error');
-    emailInput.focus();
-    errorMessageContainer.textContent = emailErrorMessage;
-    return false;
-  }
-  emailContainer.classList.remove('email-error');
-  return true;
-};
+formButton.addEventListener('click', storeData);
+username.addEventListener('keyup', storeData);
+email.addEventListener('keyup', storeData);
+message.addEventListener('keyup', storeData);
 
-contactForm.addEventListener('submit', (event) => {
-  if (!validateEmail()) {
-    event.preventDefault();
-  } else {
-    localStorage.removeItem('formData');
-  }
-});
+//Pre-filled data
 
-formElement.forEach((formItem) => {
-  formItem.value = formData[formItem.name];
-  formItem.addEventListener('input', (e) => {
-    formData[e.target.name] = e.target.value;
-    localStorage.setItem('formData', JSON.stringify(formData));
-  });
-});
+if (localStorage.getItem('user')) {
+  const user = JSON.parse(localStorage.getItem('user'));
+  username.value = user.nameValue;
+  email.value = user.emailValue;
+  message.value = user.messageValue;
+}
