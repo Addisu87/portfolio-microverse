@@ -31,7 +31,7 @@ function storeData() {
   const user = {
     nameValue,
     emailValue,
-    messageValue,
+    messageValue
   };
   if (nameValue && emailValue && messageValue) {
     const stringedUser = JSON.stringify(user);
@@ -43,12 +43,3 @@ formButton.addEventListener('click', storeData);
 username.addEventListener('keyup', storeData);
 email.addEventListener('keyup', storeData);
 message.addEventListener('keyup', storeData);
-
-// Pre-filled data
-
-if (localStorage.getItem('user')) {
-  const user = JSON.parse(localStorage.getItem('user'));
-  username.value = user.nameValue;
-  email.value = user.emailValue;
-  message.value = user.messageValue;
-}
