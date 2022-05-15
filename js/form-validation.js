@@ -31,7 +31,7 @@ function storeData() {
   const user = {
     nameValue,
     emailValue,
-    messageValue
+    messageValue,
   };
   if (nameValue && emailValue && messageValue) {
     const stringedUser = JSON.stringify(user);
