@@ -572,14 +572,6 @@ textarea {
   margin-bottom: 32px;
 }
 
-input:invalid {
-  box-shadow: 0 0 5px 1px red;
-}
-
-input:focus:invalid {
-  box-shadow: none;
-}
-
 #error-msg {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
