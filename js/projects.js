@@ -3,7 +3,7 @@ const projects = [
     id: 1,
     name: 'Facebook 360',
     experience: ['FACEBOOK', 'Full Stack Dev', '2018'],
-    image: '/images/Snapshoot-Portfolio-1.svg',
+    image: './images/Snapshoot-Portfolio-1.svg',
     description:
       'Exploring the future of media in Facebook first Virtual Reality app; a place to discover and enjoy 360 photos and videos on Gear VR.',
     popDescription:
@@ -17,7 +17,7 @@ const projects = [
     id: 2,
     name: 'Multi-Post Stories',
     experience: ['FACEBOOK', 'Full Stack Dev', 2015],
-    image: '/images/Snapshoot-Portfolio-2.svg',
+    image: './images/Snapshoot-Portfolio-2.svg',
     description:
       'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
     popDescription:
@@ -31,7 +31,7 @@ const projects = [
     id: 3,
     name: 'Tonic',
     experience: ['CANOPY', 'Back End Dev', 2015],
-    image: '/images/Snapshoot-Portfolio-3.svg',
+    image: './images/Snapshoot-Portfolio-3.svg',
     description:
       'A daily selection of privately personalized reads; no accounts or sign-ups required.',
     popDescription:
@@ -45,7 +45,7 @@ const projects = [
     id: 4,
     name: 'Uber Navigation',
     experience: ['Uber', 'Lead Developer', 2018],
-    image: '/images/Snapshoot-Portfolio-4.svg',
+    image: './images/Snapshoot-Portfolio-4.svg',
     description:
       'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.',
     popDescription:
@@ -73,7 +73,7 @@ for (let i = 0; i < projects.length; i += 1) {
         : `<li ><a href="#">${projects[i].experience[k]}</a></li>`;
     if (k !== projects[i].experience.length - 1) {
       experienceList
-        += '<li><a href="#"><img src="/images/Counter.png" alt="dot"></a></li>';
+        += '<li><a href="#"><img src="./images/Counter.png" alt="dot"></a></li>';
     }
   }
 
@@ -120,7 +120,7 @@ const displayPopupModal = (i) => {
         : `<li ><a href="#">${projects[i].experience[k]}</a></li>`;
     if (k !== projects[i].experience.length - 1) {
       experienceList
-        += '<li><a href="#"><img src="/images/Counter.png" alt="dot"></a></li>';
+        += '<li><a href="#"><img src="./images/Counter.png" alt="dot"></a></li>';
     }
   }
 
