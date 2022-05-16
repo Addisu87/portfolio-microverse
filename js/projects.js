@@ -3,7 +3,7 @@ const projects = [
     id: 1,
     name: 'Facebook 360',
     experience: ['FACEBOOK', 'Full Stack Dev', '2018'],
-    image: '/images/Snapshoot-Portfolio-1.svg',
+    image: './images/Snapshoot-Portfolio-1.svg',
     description:
       'Exploring the future of media in Facebook first Virtual Reality app; a place to discover and enjoy 360 photos and videos on Gear VR.',
     popDescription:
@@ -11,13 +11,13 @@ const projects = [
     technologies: ['html', 'Ruby on rails', 'css', 'javascript'],
     popupTech: ['html', 'css', 'javaScript', 'github', 'Ruby', 'Bootstrap'],
     seeLive: '#',
-    seeSource: '#',
+    seeSource: '#'
   },
   {
     id: 2,
     name: 'Multi-Post Stories',
     experience: ['FACEBOOK', 'Full Stack Dev', 2015],
-    image: '/images/Snapshoot-Portfolio-2.svg',
+    image: './images/Snapshoot-Portfolio-2.svg',
     description:
       'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
     popDescription:
@@ -25,13 +25,13 @@ const projects = [
     technologies: ['html', 'Ruby on rails', 'css', 'javascript'],
     popupTech: ['html', 'css', 'javaScript', 'github', 'Ruby', 'Bootstrap'],
     seeLive: '#',
-    seeSource: '#',
+    seeSource: '#'
   },
   {
     id: 3,
     name: 'Tonic',
     experience: ['CANOPY', 'Back End Dev', 2015],
-    image: '/images/Snapshoot-Portfolio-3.svg',
+    image: './images/Snapshoot-Portfolio-3.svg',
     description:
       'A daily selection of privately personalized reads; no accounts or sign-ups required.',
     popDescription:
@@ -39,13 +39,13 @@ const projects = [
     technologies: ['html', 'Ruby on rails', 'css', 'javascript'],
     popupTech: ['html', 'css', 'javaScript', 'github', 'Ruby', 'Bootstrap'],
     seeLive: '#',
-    seeSource: '#',
+    seeSource: '#'
   },
   {
     id: 4,
     name: 'Uber Navigation',
     experience: ['Uber', 'Lead Developer', 2018],
-    image: '/images/Snapshoot-Portfolio-4.svg',
+    image: './images/Snapshoot-Portfolio-4.svg',
     description:
       'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.',
     popDescription:
@@ -53,8 +53,8 @@ const projects = [
     technologies: ['html', 'Ruby on rails', 'css', 'javascript'],
     popupTech: ['html', 'css', 'javaScript', 'github', 'Ruby', 'Bootstrap'],
     seeLive: '#',
-    seeSource: '#',
-  },
+    seeSource: '#'
+  }
 ];
 
 /* Populate object to html elements when the page loads */
@@ -67,13 +67,13 @@ for (let i = 0; i < projects.length; i += 1) {
   }
 
   for (let k = 0; k < projects[i].experience.length; k += 1) {
-    experienceList
-      += k === 0
+    experienceList +=
+      k === 0
         ? `<li><a href="#" class="canopy">${projects[i].experience[k]}</a></li>`
         : `<li ><a href="#">${projects[i].experience[k]}</a></li>`;
     if (k !== projects[i].experience.length - 1) {
-      experienceList
-        += '<li><a href="#"><img src="/images/Counter.png" alt="dot"></a></li>';
+      experienceList +=
+        '<li><a href="#"><img src="./images/Counter.png" alt="dot"></a></li>';
     }
   }
 
@@ -114,13 +114,13 @@ const displayPopupModal = (i) => {
   }
 
   for (let k = 0; k < projects[i].experience.length; k += 1) {
-    experienceList
-      += k === 0
+    experienceList +=
+      k === 0
         ? `<li><a href="#" class="canopy">${projects[i].experience[k]}</a></li>`
         : `<li ><a href="#">${projects[i].experience[k]}</a></li>`;
     if (k !== projects[i].experience.length - 1) {
-      experienceList
-        += '<li><a href="#"><img src="/images/Counter.png" alt="dot"></a></li>';
+      experienceList +=
+        '<li><a href="#"><img src="./images/Counter.png" alt="dot"></a></li>';
     }
   }
 
@@ -169,12 +169,16 @@ const closePopupModal = () => {
   body.style.overflow = 'auto';
 };
 
-document.querySelectorAll('.btn-see-project').forEach((element) => element.addEventListener('click', () => {
-  displayPopupModal(element.getAttribute('data-index'));
-}));
+document.querySelectorAll('.btn-see-project').forEach((element) =>
+  element.addEventListener('click', () => {
+    displayPopupModal(element.getAttribute('data-index'));
+  })
+);
 
-document.querySelectorAll('.close').forEach((element) => element.addEventListener('click', () => {
-  closePopupModal(element.getAttribute('data-index'));
-}));
+document.querySelectorAll('.close').forEach((element) =>
+  element.addEventListener('click', () => {
+    closePopupModal(element.getAttribute('data-index'));
+  })
+);
 
 /* End of display popup modal */
