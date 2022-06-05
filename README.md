@@ -5,7 +5,7 @@
 ## Built With
 
 - HTML-5
-- CSS
+- CSS-3
 - JavaScript
 
 ## Live Demo
