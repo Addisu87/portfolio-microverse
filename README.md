@@ -35,7 +35,7 @@
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Addisu87/portfolio-microverse/issues/new).
+Feel free to check the [issues page](https://github.com/Addisu87/portfolio-microverse/issues).
 
 ## Show your support
 
