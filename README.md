@@ -1,16 +1,12 @@
-# Project Name
+# Portfolio page
 
-- Portfolio page
-
-> Description the project.
-
-- Building a personal portfolio pages and it's responsive in different platforms.
+> Building a personal portfolio pages and it's responsive in different platforms.
 
 ## Built With
 
-- Major languages - HTML and CSS.
-- Frameworks -
-- Technologies used
+- HTML-5
+- CSS-3
+- JavaScript
 
 ## Live Demo
 
