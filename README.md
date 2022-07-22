@@ -8,6 +8,10 @@
 - CSS-3
 - JavaScript
 
+# Portfolio-Picture
+
+![](https://i.imgur.com/qJ22tGt.png)
+
 ## Live Demo
 
 [Live Demo Link](https://addisu87.github.io/portfolio-microverse/)
